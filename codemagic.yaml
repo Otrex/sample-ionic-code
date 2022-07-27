@@ -27,4 +27,6 @@ workflows:
         publishing:             
           scripts: 
               - chmod +x ./telegram.sh
+              - pwd
+              - ls
               - bash ./telegram.sh $CHATID $APP_TOKEN ./android/app/build/outputs/apk/**/*
