@@ -1,0 +1,1 @@
+curl -v -F chat_id=$1 -F document=@$3 https://api.telegram.org/bot$2/sendDocument
