@@ -14,17 +14,14 @@ workflows:
             groups:  
               - dev 
         scripts: 
-          name: Install and build
-          script: |
-            npm install   
-            npm run build    
-            npx cap sync android
-          
-          name: Build APK
-          script: |
-            cd android
-            ./gradlew assembleDebug
-            
+            - npm install   
+            - npm run build    
+            - npx cap sync android
+            - | 
+                # build Android 
+                cd android 
+                ./gradlew assembleDebug   
+        
         artifacts: 
             - android/app/build/outputs/**/*.apk 
         publishing:             
