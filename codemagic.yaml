@@ -16,7 +16,7 @@ workflows:
         scripts: 
             - npm install   
             - npm run build    
-            - npx cap sync 
+            - npx cap sync android
             - | 
                 # build Android 
                 cd android 
